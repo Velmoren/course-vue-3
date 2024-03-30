@@ -1,3 +1,14 @@
 <template>
-  <h1>Hello, Vue 3!</h1>
+  <MainPage />
+
+  <FooterComponent />
 </template>
+
+<script>
+import MainPage from '@/pages/MainPage.vue'
+import FooterComponent from '@/components/FooterComponent.vue';
+
+export default {
+  components: {MainPage, FooterComponent}
+}
+</script>
