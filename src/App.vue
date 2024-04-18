@@ -2,13 +2,13 @@
   <RouterView name="header" />
   <RouterView />
 
-  <FooterComponent />
+  <Footer />
 </template>
 
 <script>
-import FooterComponent from '@/components/FooterComponent.vue';
+import Footer from '@/components/Footer.vue';
 
 export default {
-  components: { FooterComponent }
+  components: { Footer }
 }
 </script>
