@@ -13,10 +13,10 @@
                             <RouterLink to="our-coffee">Our coffee</RouterLink>
                         </li>
                         <li class="footer__item">
-                            <a href="./goodspage.html">For your pleasure</a>
+                            <RouterLink to="/pleasure">For your pleasure</RouterLink>
                         </li>
                         <li class="footer__item">
-                            <a href="./contacts.html">Contact us</a>
+                            <RouterLink to="/contacts">Contact us</RouterLink>
                         </li>
                     </ul>
                 </div>
