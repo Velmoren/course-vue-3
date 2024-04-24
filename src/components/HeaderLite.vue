@@ -1,13 +1,13 @@
 <template>
     <header>
-        <div class="banner coffepage-banner">
+        <div :class="[bannerClass, 'banner']">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
                         <NavBar />
                     </div>
                 </div>
-                <h1 class="title-big">Our Coffee</h1>
+                <h1 class="title-big">{{ title }}</h1>
             </div>
         </div>
     </header>
@@ -17,6 +17,16 @@
 import NavBar from '@/components/NavBar.vue'
 
 export default {
-    components: { NavBar }
+    components: { NavBar },
+    props: {
+        bannerClass: {
+            type: String,
+            required: true
+        },
+        title: {
+            type: String,
+            required: true
+        }
+    }
 }
 </script>

@@ -14,12 +14,12 @@ import ThanksPage from './pages/ThanksPage.vue'
 import ProductPage from './pages/ProductPage.vue'
 
 const routes = [
-    { path: '/', components: { default: MainPage, header: Header } },
-    { path: '/our-coffee', components: { default: OurCoffeePage, header: HeaderLite } },
-    { path: '/pleasure', components: { default: PleasurePage, header: HeaderLite } },
-    { path: '/contacts', components: { default: ContactsPage, header: HeaderLite } },
-    { path: '/thanks', components: { default: ThanksPage, header: HeaderLite } },
-    { path: '/product', components: { default: ProductPage, header: HeaderLite } },
+    { path: '/', component: MainPage },
+    { path: '/our-coffee', component: OurCoffeePage },
+    { path: '/pleasure', component: PleasurePage },
+    { path: '/contacts', component: ContactsPage },
+    { path: '/thanks', component: ThanksPage },
+    { path: '/product', component: ProductPage },
 ]
 
 const router = createRouter({

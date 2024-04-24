@@ -1,4 +1,9 @@
 <template>
+    <HeaderLite 
+        bannerClass="contactspage-banner"
+        title="Contact us"
+    />
+
     <main>
         <section class="contacts">
             <div class="container">
@@ -22,3 +27,11 @@
         </section>
     </main>
 </template>
+
+<script>
+import HeaderLite from '@/components/HeaderLite.vue'
+
+export default {
+    components: { HeaderLite }
+}
+</script>

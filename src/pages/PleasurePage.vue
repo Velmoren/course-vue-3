@@ -1,5 +1,10 @@
 <template>
-  <main>
+    <HeaderLite 
+        bannerClass="goodspage-banner"
+        title="For your pleasure"
+    />
+
+    <main>
         <section class="shop">
             <div class="container">
                 <div class="row">
@@ -79,5 +84,13 @@
                 </div>
             </div>
         </section>
-    </main>  
+    </main>
 </template>
+
+<script>
+import HeaderLite from '@/components/HeaderLite.vue'
+
+export default {
+    components: { HeaderLite }
+}
+</script>

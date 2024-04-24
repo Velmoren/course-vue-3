@@ -1,4 +1,6 @@
 <template>
+    <Header />
+
     <main>
         <section class="about">
             <div class="container">
@@ -29,30 +31,27 @@
                 <div class="row">
                     <div class="col-lg-10 offset-lg-1">
                         <div class="best__wrapper">
-                            <ProductCard />
-                            <ProductCard />
-                            <ProductCard />
-                            <!-- <div class="best__item">
-                                <img src="@/assets/img/coffee-1.jpg" alt="coffee">
-                                <div class="best__item-title">
-                                    Solimo Coffee Beans 2kg
-                                </div>
-                                <div class="best__item-price">10.73$</div>
-                            </div>
-                            <div class="best__item">
-                                <img src="@/assets/img/coffee-2.jpg" alt="coffee">
-                                <div class="best__item-title">
-                                    Presto Coffee Beans 1kg
-                                </div>
-                                <div class="best__item-price">15.99$</div>
-                            </div>
-                            <div class="best__item">
-                                <img src="@/assets/img/coffee-3.jpg" alt="coffee">
-                                <div class="best__item-title">
-                                    AROMISTICO Coffee 1kg
-                                </div>
-                                <div class="best__item-price">6.99$</div>
-                            </div> -->
+                            <ProductCard 
+                                :id="bestsellers[0].id"
+                                :name="bestsellers[0].name"
+                                :price="bestsellers[0].price"
+                                :url="bestsellers[0].url"
+                                typeClass="best__item"
+                            />
+                            <ProductCard 
+                                :id="bestsellers[1].id"
+                                :name="bestsellers[1].name"
+                                :price="bestsellers[1].price"
+                                :url="bestsellers[1].url"
+                                typeClass="best__item"
+                            />
+                            <ProductCard 
+                                :id="bestsellers[2].id"
+                                :name="bestsellers[2].name"
+                                :price="bestsellers[2].price"
+                                :url="bestsellers[2].url"
+                                typeClass="best__item"
+                            />
                         </div>
                     </div>
                 </div>
@@ -63,8 +62,33 @@
 
 <script>
 import ProductCard from '@/components/ProductCard.vue'
+import Header from '@/components/Header.vue'
 
 export default {
-    components: { ProductCard }
+    components: { Header, ProductCard },
+    data() {
+        return {
+            bestsellers: [
+                {
+                    id: 0,
+                    name: 'Solimo Coffee Beans 2kg',
+                    price: 10.73,
+                    url: '@/assets/img/coffee-1.jpg'
+                },
+                {
+                    id: 1,
+                    name: 'Presto Coffee Beans 1kg',
+                    price: 15.99,
+                    url: '@/assets/img/coffee-2.jpg'
+                },
+                {
+                    id: 2,
+                    name: 'AROMISTICO Coffee 1kg',
+                    price: 6.99,
+                    url: '@/assets/img/coffee-3.jpg'
+                }
+            ]
+        }
+    }
 }
 </script>

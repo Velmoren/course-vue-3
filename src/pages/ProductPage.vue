@@ -1,4 +1,9 @@
 <template>
+    <HeaderLite 
+        bannerClass="itempage-banner"
+        title="Our Coffee"
+    />
+
     <main>
         <section class="shop">
             <div class="container">
@@ -31,3 +36,11 @@
         </section>
     </main>
 </template>
+
+<script>
+import HeaderLite from '@/components/HeaderLite.vue'
+
+export default {
+    components: { HeaderLite }
+}
+</script>
