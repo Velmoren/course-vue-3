@@ -4,7 +4,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
-                        <NavBar />
+                        <NavBar :classLink="'header__item'" :classNavBar="'header'">
+                            <template v-slot:logo>
+                                <img src="@/assets/logo/Logo.svg" alt="logo">
+                            </template>
+                        </NavBar>
                     </div>
                 </div>
                 <h1 class="title-big">{{ title }}</h1>
